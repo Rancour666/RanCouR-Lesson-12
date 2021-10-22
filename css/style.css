@@ -105,7 +105,7 @@ a:active, a:focus { outline: none; }
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	z-index: 1;
+	opacity: 0.7;
 }
 .car__background:before{
 	content: '';
@@ -114,11 +114,29 @@ a:active, a:focus { outline: none; }
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 	z-index: 53;
 }
 
-
+.car__background_night img{
+	height: 40%;
+}
+.car__background_night{
+	opacity: 1;
+	height: 40%;
+}
+.wrapper:hover .car__background_night{
+	opacity: 0;
+	transition: all 10s linear 0s;
+}
+.wrapper:hover .car__background img{
+	opacity: 1;
+	transition: all 10s linear 0s;
+}
+.wrapper:hover .car__background:before{
+	background: rgba(0, 0, 0, 0);
+	transition: all 20s linear 0s;
+}
 
 
 /*=================WHEELS=============*/
@@ -647,16 +665,15 @@ a:active, a:focus { outline: none; }
 	right: 25%;
 	top: 25%;
 	z-index: 6;
+	opacity: 0.6;
 }
 .wrapper:hover .car__sun img{
 	transform:translate(1000px, -1000px) scale(2);
 	transition: all 90s linear 0s;
+	opacity: 1;
 	z-index: 54;
 }
-.wrapper:hover .car__background:before{
-	background: rgba(0, 0, 0, 0);
-	transition: all 30s ease 0s;
-}
+
 
 .wrapper:hover .car__light-beam img{
 	opacity: 0;
@@ -846,4 +863,19 @@ a:active, a:focus { outline: none; }
 	z-index: 7;
 	border-radius: 8px;
 	overflow: hidden;
+}
+
+
+
+.car__moon img{
+	width: 150px;
+	position: absolute;
+	left: 25%;
+	top: -5%;
+	z-index: 1;
+}
+.wrapper:hover .car__moon img{
+	transform: scale(0.7) translate(100px, 300px) rotate(35deg);
+	opacity: 0;
+	transition: all 20s linear 0s;
 }
