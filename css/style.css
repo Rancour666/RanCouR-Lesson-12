@@ -127,7 +127,7 @@ a:active, a:focus { outline: none; }
 }
 .wrapper:hover .car__background_night{
 	opacity: 0;
-	transition: all 10s linear 0s;
+	transition: all 15s linear 0s;
 }
 .wrapper:hover .car__background img{
 	opacity: 1;
@@ -249,7 +249,7 @@ a:active, a:focus { outline: none; }
 }
 
 .wrapper:hover .car__window:after{
-	transition: all 12s ease 4s;
+	transition: all 14s ease 6s;
 	top: 100px;
 	height: 0%;
 	z-index: 1;
