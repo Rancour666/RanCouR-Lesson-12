@@ -82,7 +82,7 @@ a:active, a:focus { outline: none; }
 	width: 20%;
 	height: 30%;
 	transform: scale(0.55);
-	top:27%;
+	top:30%;
 	left: -600px;
 	z-index: 56;
 }
@@ -605,7 +605,7 @@ a:active, a:focus { outline: none; }
 
 .wrapper:hover .fullscreen__elements-background{
 	transform: scale(3);
-	opacity: 1;
+	opacity: 0.7;
 	transition: all 60s ease 0s;
 }
 
@@ -644,7 +644,7 @@ a:active, a:focus { outline: none; }
 	width: 200px;
 	position: absolute;
 	left: 5%;
-	top: 20%;
+	top: 18%;
 	z-index: 54;
 }
 
@@ -662,7 +662,7 @@ a:active, a:focus { outline: none; }
 }
 .wrapper:hover .car__stork img{
 	transform: translate(3700px, -350px) scale(0.3);
-	transition: all 35s linear 7s;
+	transition: all 30s linear 7s;
 }
 
 
@@ -751,3 +751,42 @@ a:active, a:focus { outline: none; }
 	transition: all 240s linear 0s;
 }
 
+
+.car__bicycle-first img{
+	width: 300px;
+	position: absolute;
+	left: -300px;
+	top: 48%;
+	z-index: 58;
+}
+
+.wrapper:hover .car__bicycle-first img{
+	transform: translate(3800px,0px);
+	transition: all 100s ease 4s;
+}
+
+.car__bicycle-second img{
+	width: 250px;
+	position: absolute;
+	right: -250px;
+	top: 41%;
+	z-index: 8;
+}
+
+.wrapper:hover .car__bicycle-second img{
+	transform: translate(-3800px,0px);
+	transition: all 60s ease 2s;
+}
+
+.car__plane img{
+	width: 350px;
+	position: absolute;
+	right: -450px;
+	top: 25%;
+	z-index: 50;
+}
+
+.wrapper:hover .car__plane img{
+	transform: scale(0.6) translate(-7000px,-750px);
+	transition: all 30s linear 3s;
+}
