@@ -84,7 +84,6 @@ a:active, a:focus { outline: none; }
 	transform: scale(0.55);
 	top:30%;
 	left: -600px;
-	left: -0px;
 	z-index: 56;
 }
 .car__body {
@@ -182,10 +181,10 @@ a:active, a:focus { outline: none; }
 	transform: rotate(360000deg);
 	transition: all 600s linear 0s;
 }
-/*.wrapper:hover .car__block{
+.wrapper:hover .car__block{
 	transform: translate(4000px) scale(0.55);
 	transition: all 45s linear 0s;
-}*/
+}
 
 
 
@@ -232,7 +231,7 @@ a:active, a:focus { outline: none; }
 }
 
 .wrapper:hover .car__window:after{
-	transition: all 10s ease 0s;
+	transition: all 12s ease 4s;
 	top: 100px;
 	height: 0%;
 	z-index: 1;
