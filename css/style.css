@@ -612,9 +612,9 @@ a:active, a:focus { outline: none; }
 .car__sun img{
 	width: 200px;
 	position: absolute;
-	right: 20%;
+	right: 25%;
 	top: 25%;
-	z-index: 4;
+	z-index: 6;
 }
 .wrapper:hover .car__sun img{
 	transform:translate(1000px, -1000px) scale(2);
@@ -640,6 +640,19 @@ a:active, a:focus { outline: none; }
 	z-index: 55;
 	transform: rotate(-90deg);
 }
+.car__flag img{
+	width: 250px;
+	position: absolute;
+	left: 325px;
+	top: 100px;
+	z-index: 5;
+	transform: rotate(180deg) rotateX(180deg);
+}
+
+
+
+
+
 .car__air-baloon img{
 	width: 200px;
 	position: absolute;
@@ -783,10 +796,22 @@ a:active, a:focus { outline: none; }
 	position: absolute;
 	right: -450px;
 	top: 25%;
-	z-index: 50;
+	z-index: 6;
 }
 
 .wrapper:hover .car__plane img{
 	transform: scale(0.6) translate(-7000px,-750px);
 	transition: all 30s linear 3s;
+}
+
+
+
+.car__banner img{
+	width: 250px;
+	position: absolute;
+	right: 20px;
+	top: 25%;
+	z-index: 7;
+	border-radius: 8px;
+	overflow: hidden;
 }
