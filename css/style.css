@@ -667,10 +667,10 @@ a:active, a:focus { outline: none; }
 }
 
 .car__stork img{
-	width: 200px;
+	width: 150px;
 	position: absolute;
 	left: -250px;
-	top: 30%;
+	top: 20%;
 	z-index: 54;
 }
 .wrapper:hover .car__stork img{
