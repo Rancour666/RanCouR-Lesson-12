@@ -84,6 +84,7 @@ a:active, a:focus { outline: none; }
 	transform: scale(0.55);
 	top:30%;
 	left: -600px;
+	left: -0px;
 	z-index: 56;
 }
 .car__body {
@@ -181,10 +182,10 @@ a:active, a:focus { outline: none; }
 	transform: rotate(360000deg);
 	transition: all 600s linear 0s;
 }
-.wrapper:hover .car__block{
+/*.wrapper:hover .car__block{
 	transform: translate(4000px) scale(0.55);
 	transition: all 45s linear 0s;
-}
+}*/
 
 
 
@@ -213,8 +214,30 @@ a:active, a:focus { outline: none; }
 	width: 238px;
 	height: 100px;
 	z-index: 18;
-	background: linear-gradient(to right, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%);
+	/*background: linear-gradient(to right, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%);*/
+	background:url('../img/passangers.jpg') center -20px / 238px 150px no-repeat ;
 }
+.car__window:after{
+	content:'';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(208,228,247,0.6) 0%,rgba(115,177,231,0.6) 24%,rgba(10,119,213,0.6) 50%,rgba(83,159,225,0.6) 79%,rgba(135,188,234,0.6) 100%);
+	border-radius: 5% 35% 8% 5% / 24% 94% 8% 24% ;
+	border:1px solid black
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	z-index: 19;
+}
+
+.wrapper:hover .car__window:after{
+	transition: all 10s ease 0s;
+	top: 100px;
+	height: 0%;
+	z-index: 1;
+}
+
 .car__window::before{
 	content: '';
 	position: absolute;
@@ -231,8 +254,12 @@ a:active, a:focus { outline: none; }
 	left: 137px;
 	border-radius: 84% 12% 11% 61% / 100% 34% 40% 10%;
 	width: 210px;
+	background: linear-gradient(to right, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%);
 }
 .car__window_two::before{
+	display: none;
+}
+.car__window_two::after{
 	display: none;
 }
 .car__window_three{
@@ -243,8 +270,12 @@ a:active, a:focus { outline: none; }
 	width: 32px;
 	height: 114px;
 	transform: rotate(54deg);
+	background: linear-gradient(to right, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%);
 }
 .car__window_three::before{
+	display: none;
+}
+.car__window_three::after{
 	display: none;
 }
 
@@ -284,7 +315,7 @@ a:active, a:focus { outline: none; }
 	height: 315px;
 	width: 300px;
 	border: 3px solid black;
-	z-index: 15;
+	z-index: 16;
 	background-color: rgb(255, 255, 255);
 	background: url('../img/image-fixed.jpg') center bottom / 330px 168px no-repeat greenyellow;
 }
