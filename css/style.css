@@ -599,12 +599,13 @@ a:active, a:focus { outline: none; }
 	bottom: 0px;
 	left: 0;
 	z-index: 57;
-	opacity: 0.9;
+	opacity: 0.3;
 }
 
 .wrapper:hover .fullscreen__elements-background{
 	transform: scale(3);
-	transition: all 120s ease 0s;
+	opacity: 1;
+	transition: all 60s ease 0s;
 }
 
 .car__sun img{
