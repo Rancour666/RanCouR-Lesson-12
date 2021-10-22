@@ -748,7 +748,7 @@ a:active, a:focus { outline: none; }
 	height: 150px;
 	border-radius: 50%;
 	overflow: hidden;
-	z-index: 113;
+	z-index: 123;
 }
 
 .car__fixed-image img{
@@ -770,7 +770,7 @@ a:active, a:focus { outline: none; }
 	height: 60px;
 	border-radius: 50%;
 	background: url('../img/image-fixed.jpg') center / 265px 140px no-repeat;
-	z-index:121;
+	z-index:131;
 	position: absolute;
 }
 .car__fixed-image::after{
@@ -781,7 +781,7 @@ a:active, a:focus { outline: none; }
 	height: 150px;
 	border-radius: 50%;
 	background-color: rgba(0, 0, 0, 0.508);
-	z-index:120;
+	z-index:130;
 	position: absolute;
 }
 
@@ -791,7 +791,7 @@ a:active, a:focus { outline: none; }
 	right: 7%;
 	width: 697px;
 	height: 515px;
-	z-index: 112;
+	z-index: 122;
 	transform: translate(290px, -192px) scale(0.29) rotate(0deg);
 }
 .car__fixed-image-turntable-arm{
@@ -800,7 +800,7 @@ a:active, a:focus { outline: none; }
 	right: 7%;
 	width: 555px;
 	height: 300px;
-	z-index: 113;
+	z-index: 123;
 	transform: translate(285px, -118px) scale(0.265) rotate(13deg);
 }
 
@@ -879,3 +879,20 @@ a:active, a:focus { outline: none; }
 	opacity: 0;
 	transition: all 20s linear 0s;
 }
+
+
+
+
+.car__bush img{
+	width: 120px;
+	position: absolute;
+	left: -120px;
+	top: 75%;
+	z-index: 120;
+}
+.wrapper:hover .car__bush img {
+	transform: translate(3800px, 100px) rotate(3600deg);
+	transition: all 45s linear 25s;
+}
+
+
