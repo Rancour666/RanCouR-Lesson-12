@@ -284,7 +284,7 @@ a:active, a:focus { outline: none; }
 	border: 3px solid black;
 	z-index: 15;
 	background-color: rgb(255, 255, 255);
-	background: greenyellow;
+	background: url('../img/image-fixed.jpg') center bottom / 330px 168px no-repeat greenyellow;
 }
 .car__door:before{
 	position: absolute;
@@ -295,6 +295,7 @@ a:active, a:focus { outline: none; }
 	width: 75px;
 	border-radius: 100%;
 	border: 3px solid black;
+	background-color: greenyellow;
 }
 .car__door:after{
 	position: absolute;
@@ -663,3 +664,90 @@ a:active, a:focus { outline: none; }
 	transform: translate(3700px, -350px) scale(0.3);
 	transition: all 35s linear 7s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.car__fixed-image{
+	position: fixed;
+	top:78%;
+	right: 7%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 113;
+}
+
+.car__fixed-image img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 1;
+}
+
+
+.car__fixed-image::before{
+	content: '';
+	top: 50%;left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: url('../img/image-fixed.jpg') center / 265px 140px no-repeat;
+	z-index:121;
+	position: absolute;
+}
+.car__fixed-image::after{
+	content: '';
+	top: 50%;left: 50%;
+	transform: translate(-50%, -50%);
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.508);
+	z-index:120;
+	position: absolute;
+}
+
+.car__fixed-image-turntable{
+	position: fixed;
+	top:78%;
+	right: 7%;
+	width: 697px;
+	height: 515px;
+	z-index: 112;
+	transform: translate(290px, -192px) scale(0.29) rotate(0deg);
+}
+.car__fixed-image-turntable-arm{
+	position: fixed;
+	top:78%;
+	right: 7%;
+	width: 555px;
+	height: 300px;
+	z-index: 113;
+	transform: translate(285px, -118px) scale(0.265) rotate(13deg);
+}
+
+.wrapper:hover .car__fixed-image img{
+	transform: rotate(3600deg);
+	transition: all 38800000s linear 0s;
+}
+.wrapper:hover .car__fixed-image{
+	transform: rotate(3600deg);
+	transition: all 240s linear 0s;
+}
+
