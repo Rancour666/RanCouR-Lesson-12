@@ -68,14 +68,30 @@ a:active, a:focus { outline: none; }
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*==========================================================CAR_CONSTRUCTION====================================================================================================*/
+
+
+
+
+
+
+
+/*==================================CAR-MAIN-BLOCK-MOVEMENT==================================*/
 .car {
 	min-height:100vh ;
 	position: relative;
 }
-
-
-
-
 
 .car__block{
 	position: absolute;
@@ -83,66 +99,37 @@ a:active, a:focus { outline: none; }
 	height: 30%;
 	transform: scale(0.55);
 	top:30%;
-	left: -600px;
+	left: -700px;
 	z-index: 56;
 }
-.car__body {
-	position: relative;
-	
+
+.wrapper:hover .car__block{
+	transform: translate(1000px) scale(0.55);
+	transition: all 10s ease-out 0s;
+}
+.wrapper:hover .car__block{
+	visibility: hidden;
+	transition: all 18s ease-out 0s;
 }
 
-
-
-
-.car__wheels{
-	position: relative;
+.car__block_two{
+	visibility: hidden;
+	left: 300px;
 }
 
-.car__background img{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0.7;
+.wrapper:hover .car__block_two{
+	visibility: visible;
+	transform: translate(3000px) scale(0.55) rotate(0deg);
+	transition: all 25s ease-out 18s;
 }
-.car__background:before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	z-index: 53;
-}
-
-.car__background_night img{
-	height: 40%;
-}
-.car__background_night{
-	opacity: 1;
-	height: 40%;
-}
-.wrapper:hover .car__background_night{
-	opacity: 0;
-	transition: all 15s linear 0s;
-}
-.wrapper:hover .car__background img{
-	opacity: 1;
-	transition: all 10s linear 0s;
-}
-.wrapper:hover .car__background:before{
-	background: rgba(0, 0, 0, 0);
-	transition: all 20s linear 0s;
-}
-
-
-/*=================WHEELS=============*/
+/*==================================CAR-MAIN-BLOCK-MOVEMENT==================================*/
 
 
 
+
+
+
+/*==================================CAR-WHEELS==================================*/
 .car__wheel {
 	width: 200px;
 	height: 200px;
@@ -195,27 +182,83 @@ a:active, a:focus { outline: none; }
 	z-index: 2;
 }
 
-.wrapper:hover .car__wheel{
-	transform: rotate(360000deg);
-	transition: all 600s linear 0s;
+
+
+.car__wheel-add {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color:rgb(36, 36, 36);
+	border: 3px solid black;
+	position: absolute;
+	top: 500px;left: 0;
+	z-index: 21;
+	box-shadow:inset 2px 2px 15px 5px rgba(87, 87, 87, 0.597);
 }
-.wrapper:hover .car__block{
-	transform: translate(4000px) scale(0.55);
-	transition: all 45s linear 0s;
+.car__wheel-add::before {
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	background-color:#ffffff;
+	border: 3px solid black;
+	display: inline-block;
+	box-shadow: 2px 2px 32px 5px rgba(0, 0, 0, 0.597);
+}
+.car__wheel-add::after {
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color:goldenrod;
+	border: 3px solid black;
+	display: inline-block;
+}
+.car__wheel-add span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background:url('../img/logo.svg') center/ 50px no-repeat;
+	border: 3px solid rgb(0, 30, 80);
+	z-index: 2;
 }
 
 
+.wrapper:hover .car__wheel {
+	transform: rotate(10800deg);
+	visibility: hidden;
+	transition: all 18s linear 0s;
+}
+.wrapper:hover .car__wheel-add{
+	transform: rotate(10800deg);
+	visibility: visible;
+	transition: all 18s linear 18s;
+}
 
 .car__wheel_second{
 	position: absolute;
 	left: 730px;
 }
+.car__wheel-add_second{
+	position: absolute;
+	left: 730px;
+}
+/*==================================CAR-WHEELS==================================*/
 
-
-
-
-/*=======================================WINDOWS======================================*/
-
+/*=======================================CAR-WINDOWS======================================*/
 .car__windows{
 	position: absolute;
 	top: 305px;
@@ -249,7 +292,7 @@ a:active, a:focus { outline: none; }
 }
 
 .wrapper:hover .car__window:after{
-	transition: all 14s ease 6s;
+	transition: all 6s ease 12s;
 	top: 100px;
 	height: 0%;
 	z-index: 1;
@@ -295,13 +338,11 @@ a:active, a:focus { outline: none; }
 .car__window_three::after{
 	display: none;
 }
-
+/*=======================================CAR-WINDOWS======================================*/
 
 
 
 /*=======================================BOTTOM======================================*/
-
-
 .car__bottom{
 	position: absolute;
 	top: 595px;
@@ -321,9 +362,9 @@ a:active, a:focus { outline: none; }
 	width: 457px;
 	background-color: black;
 }
+/*=======================================BOTTOM======================================*/
 
-/*=======================================DOOR======================================*/
-
+/*=======================================CAR-DOOR======================================*/
 .car__door{
 	border-radius:29% 56% 0% 0% / 2% 120% 53% 53% ;
 	position: absolute;
@@ -360,8 +401,6 @@ a:active, a:focus { outline: none; }
 	border-radius:100% 0% 0% 100% / 100% 91% 0% 0% ;
 }
 
-
-
 .car__door-fitting {
 	position: absolute;
 	top: 550px;
@@ -375,10 +414,9 @@ a:active, a:focus { outline: none; }
 .car__door-fitting_two {
 	top: 460px;
 }
+/*=======================================CAR-DOOR======================================*/
+
 /*=======================================FRAME======================================*/
-
-
-
 .car__frame{
 	border-radius:35% 28% 0% 0% / 100% 100% 0% 0% ;
 	position: absolute;
@@ -389,13 +427,11 @@ a:active, a:focus { outline: none; }
 	border: 2px solid rgb(0, 0, 0);
 	z-index: 16;
 }
-
+/*=======================================FRAME======================================*/
 
 
 
 /*=======================================WHEEL COVERS======================================*/
-
-
 .car__front-whell-cover{
 	position: absolute;
 	left: 668px;
@@ -424,7 +460,6 @@ a:active, a:focus { outline: none; }
 	box-shadow: 3px 3px 22px 10px rgba(0, 0, 0, 0.597), inset 3px 3px 22px 7px rgba(0, 0, 0, 0.597);
 }
 
-
 .car__front-whell-cover_back{
 	height: 194px;
 	width: 335px;
@@ -438,10 +473,9 @@ a:active, a:focus { outline: none; }
 	left: 50px;
 	height: 140px;
 }
-
+/*=======================================WHEEL COVERS======================================*/
 
 /*=======================================FORE-PART======================================*/
-
 .car__fore-part{
 	border-radius:42% 35% 3% 12% / 100% 100% 14% 8% ;
 	position: absolute;
@@ -455,8 +489,6 @@ a:active, a:focus { outline: none; }
 	box-shadow: 3px 3px 22px 10px rgba(0, 0, 0, 0.597), inset 3px 3px 22px 5px rgba(0, 0, 0, 0.597);
 }
 
-
-
 .car__aft-part{
 	border-radius:52% 17% 3% 6% / 105% 110% 0% 8%  ;
 	position: absolute;
@@ -469,9 +501,9 @@ a:active, a:focus { outline: none; }
 	z-index: 10;
 	box-shadow: 3px 3px 22px 7px rgba(0, 0, 0, 0.597), inset 3px 3px 22px 5px rgba(0, 0, 0, 0.597);
 }
+/*=======================================FORE-PART======================================*/
 
-
-/*=======================================LIGHTS======================================*/
+/*=======================================CAR-LIGHTS======================================*/
 
 .car__light-front{
 	position: absolute;
@@ -499,8 +531,6 @@ a:active, a:focus { outline: none; }
 	transform: rotate(0deg);
 	background: yellow;
 }
-
-
 
 .car__light-front-top{
 	position: absolute;
@@ -564,12 +594,9 @@ a:active, a:focus { outline: none; }
 	transform: skewX(0deg) ;
 	z-index: 15;
 }
-
-
-
+/*=======================================CAR-LIGHTS======================================*/
 
 /*=======================================BAMPERS======================================*/
-
 .car__bamper-forward{
 	position: absolute;
 	height: 30px;
@@ -623,7 +650,6 @@ a:active, a:focus { outline: none; }
 	box-shadow: 3px 3px 22px 6px rgba(0, 0, 0, 0.597);
 }
 
-
 .car__backdoor-handle{
 	position: absolute;
 	top: 440px;
@@ -636,12 +662,33 @@ a:active, a:focus { outline: none; }
 	z-index: 9;
 	transform: rotate(-30deg);
 }
+/*=======================================BAMPERS======================================*/
+
+/*==========================================================CAR_CONSTRUCTION====================================================================================================*/
 
 
 
-/*=======================================SPECIAL EFFECTS======================================*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=======================================SKY SPECIAL EFFECTS===================================================================================================================*/
+
+/*=======================================FOG======================================*/
 .fullscreen__elements-background{
 	background: url('../img/fog_1.png')  center -300px / 100% no-repeat;
 	position: absolute;
@@ -652,13 +699,14 @@ a:active, a:focus { outline: none; }
 	z-index: 57;
 	opacity: 0.3;
 }
-
 .wrapper:hover .fullscreen__elements-background{
 	transform: scale(3);
 	opacity: 0.7;
 	transition: all 60s ease 0s;
 }
+/*=======================================FOG======================================*/
 
+/*=======================================SUN======================================*/
 .car__sun img{
 	width: 200px;
 	position: absolute;
@@ -673,35 +721,51 @@ a:active, a:focus { outline: none; }
 	opacity: 1;
 	z-index: 54;
 }
+/*=======================================SUN======================================*/
 
+/*==================================DAY-NIGTH-BACKGROUNDS==================================*/
+.car__background img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.7;
+}
+.car__background:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 53;
+}
 
-.wrapper:hover .car__light-beam img{
+.car__background_night img{
+	height: 40%;
+}
+.car__background_night{
+	opacity: 1;
+	height: 40%;
+}
+.wrapper:hover .car__background_night{
 	opacity: 0;
-	transition: all 35s ease 0s;
+	transition: all 15s linear 0s;
 }
-
-
-.car__light-beam img{
-	width: 750px;
-	position: absolute;
-	left: 875px;
-	top: 140px;
-	z-index: 55;
-	transform: rotate(-90deg);
+.wrapper:hover .car__background img{
+	opacity: 1;
+	transition: all 10s linear 0s;
 }
-.car__flag img{
-	width: 250px;
-	position: absolute;
-	left: 325px;
-	top: 100px;
-	z-index: 5;
-	transform: rotate(180deg) rotateX(180deg);
+.wrapper:hover .car__background:before{
+	background: rgba(0, 0, 0, 0);
+	transition: all 20s linear 0s;
 }
+/*==================================DAY-NIGTH-BACKGROUNDS==================================*/
 
-
-
-
-
+/*===============================================AIR_BALOON=======================================*/
 .car__air-baloon img{
 	width: 200px;
 	position: absolute;
@@ -709,12 +773,13 @@ a:active, a:focus { outline: none; }
 	top: 18%;
 	z-index: 54;
 }
-
 .wrapper:hover .car__air-baloon img{
 	transform: scale(0.2) translate(800px, -500px);
 	transition: all 100s ease 0s;
 }
+/*===============================================AIR_BALOON=======================================*/
 
+/*===============================================BIRD=======================================*/
 .car__stork img{
 	width: 150px;
 	position: absolute;
@@ -726,6 +791,38 @@ a:active, a:focus { outline: none; }
 	transform: translate(3700px, -350px) scale(0.3);
 	transition: all 30s linear 7s;
 }
+/*===============================================BIRD=======================================*/
+
+/*===============================================PLANE=======================================*/
+.car__plane img{
+	width: 350px;
+	position: absolute;
+	right: -450px;
+	top: 25%;
+	z-index: 6;
+}
+.wrapper:hover .car__plane img{
+	transform: scale(0.6) translate(-7000px,-750px);
+	transition: all 30s linear 3s;
+}
+/*===============================================PLANE=======================================*/
+
+/*===============================================MOON=======================================*/
+.car__moon img{
+	width: 150px;
+	position: absolute;
+	left: 25%;
+	top: -5%;
+	z-index: 1;
+}
+.wrapper:hover .car__moon img{
+	transform: scale(0.7) translate(100px, 300px) rotate(35deg);
+	opacity: 0;
+	transition: all 20s linear 0s;
+}
+/*===============================================MOON=======================================*/
+
+/*=======================================SKY SPECIAL EFFECTS===================================================================================================================*/
 
 
 
@@ -740,6 +837,219 @@ a:active, a:focus { outline: none; }
 
 
 
+
+/*=======================================CAR SPECIAL EFFECTS=====================================================================================================================*/
+
+/*===============================================CAR-LIGHT-BEAM=======================================*/
+.car__light-beam img{
+	width: 750px;
+	position: absolute;
+	left: 875px;
+	top: 140px;
+	z-index: 55;
+	transform: rotate(-90deg);
+}
+.wrapper:hover .car__light-beam img{
+	opacity: 0;
+	transition: all 35s ease 0s;
+}
+/*===============================================CAR-LIGHT-BEAM=======================================*/
+
+/*===============================================SMOKE=======================================*/
+.car__smoke img{
+	width: 750px;
+	position: absolute;
+	left: -740px;
+	top: 40px;
+	z-index: 155;
+	transform: rotate(20deg);
+}
+/*===============================================SMOKE=======================================*/
+
+/*===============================================FLAG=======================================*/
+.car__flag img{
+	width: 250px;
+	position: absolute;
+	left: 325px;
+	top: 100px;
+	z-index: 5;
+	transform: rotate(180deg) rotateX(180deg);
+}
+/*===============================================FLAG=======================================*/
+
+/*=======================================CAR SPECIAL EFFECTS=====================================================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*===============================================BICYCLISTS=======================================*/
+.car__bicycle-first img{
+	width: 300px;
+	position: absolute;
+	left: -300px;
+	top: 48%;
+	z-index: 58;
+}
+.wrapper:hover .car__bicycle-first img{
+	transform: translate(3800px,0px);
+	transition: all 100s linear 4s;
+}
+.car__bicycle-second img{
+	width: 250px;
+	position: absolute;
+	right: -250px;
+	top: 41%;
+	z-index: 8;
+}
+.wrapper:hover .car__bicycle-second img{
+	transform: translate(-3800px,0px);
+	transition: all 60s ease 2s;
+}
+/*===============================================BICYCLISTS=======================================*/
+
+/*===============================================MONOLOG=======================================*/
+.car__words img {
+	width: 150px;
+	position: absolute;
+	left: 140px;
+	top: 38%;
+	z-index: 58;
+	visibility: hidden;
+}
+.wrapper:hover .car__words img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 10s;
+}
+
+.car__words_two img{
+left: 217px;
+}
+.wrapper:hover .car__words_two img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 12s;
+}
+.car__words_three img{
+left: 293px;
+}
+.wrapper:hover .car__words_three img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 14s;
+}
+.car__words_four img{
+left: 370px;
+}
+.wrapper:hover .car__words_four img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 16s;
+}
+.car__words_five img{
+left: 446px;
+}
+.wrapper:hover .car__words_five img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 18s;
+}
+.car__words_six img{
+left: 523px;
+}
+.wrapper:hover .car__words_six img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 20s;
+}
+.car__words_seven img{
+left: 677px;
+}
+.wrapper:hover .car__words_seven img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 24s;
+}
+.car__words_eight img{
+left: 753px;
+}
+.wrapper:hover .car__words_eight img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 26s;
+}
+.car__words_nine img{
+left: 829px;
+}
+.wrapper:hover .car__words_nine img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 28s;
+}
+.car__words_ten img{
+left: 905px;
+}
+.wrapper:hover .car__words_ten img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 30s;
+}
+.car__words_eleven img{
+left: 980px;
+}
+.wrapper:hover .car__words_eleven img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 32s;
+}
+.car__words_tvelve img{
+left: 1055px;
+}
+.wrapper:hover .car__words_tvelve img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 34s;
+}
+.car__words_thirteen img{
+left: 1130px;
+}
+.wrapper:hover .car__words_thirteen img{
+	transform: translate(3800px,0px);
+	visibility: visible;
+	transition: all 100s linear 36s;
+}
+/*===============================================MONOLOG=======================================*/
+
+
+
+
+
+
+
+
+
+
+/*===============================================BANNER=======================================*/
+.car__banner img{
+	width: 250px;
+	position: absolute;
+	right: 20px;
+	top: 25%;
+	z-index: 7;
+	border-radius: 8px;
+	overflow: hidden;
+}
+/*===============================================BANNER=======================================*/
+
+/*===============================================TURNTABLE=======================================*/
 .car__fixed-image{
 	position: fixed;
 	top:78%;
@@ -760,7 +1070,6 @@ a:active, a:focus { outline: none; }
 	object-fit: cover;
 	opacity: 1;
 }
-
 
 .car__fixed-image::before{
 	content: '';
@@ -812,87 +1121,15 @@ a:active, a:focus { outline: none; }
 	transform: rotate(3600deg);
 	transition: all 240s linear 0s;
 }
-
-
-.car__bicycle-first img{
-	width: 300px;
-	position: absolute;
-	left: -300px;
-	top: 48%;
-	z-index: 58;
-}
-
-.wrapper:hover .car__bicycle-first img{
-	transform: translate(3800px,0px);
-	transition: all 100s ease 4s;
-}
-
-.car__bicycle-second img{
-	width: 250px;
-	position: absolute;
-	right: -250px;
-	top: 41%;
-	z-index: 8;
-}
-
-.wrapper:hover .car__bicycle-second img{
-	transform: translate(-3800px,0px);
-	transition: all 60s ease 2s;
-}
-
-.car__plane img{
-	width: 350px;
-	position: absolute;
-	right: -450px;
-	top: 25%;
-	z-index: 6;
-}
-
-.wrapper:hover .car__plane img{
-	transform: scale(0.6) translate(-7000px,-750px);
-	transition: all 30s linear 3s;
-}
-
-
-
-.car__banner img{
-	width: 250px;
-	position: absolute;
-	right: 20px;
-	top: 25%;
-	z-index: 7;
-	border-radius: 8px;
-	overflow: hidden;
-}
-
-
-
-.car__moon img{
-	width: 150px;
-	position: absolute;
-	left: 25%;
-	top: -5%;
-	z-index: 1;
-}
-.wrapper:hover .car__moon img{
-	transform: scale(0.7) translate(100px, 300px) rotate(35deg);
-	opacity: 0;
-	transition: all 20s linear 0s;
-}
+/*===============================================TURNTABLE=======================================*/
 
 
 
 
-.car__bush img{
-	width: 120px;
-	position: absolute;
-	left: -120px;
-	top: 75%;
-	z-index: 120;
-}
-.wrapper:hover .car__bush img {
-	transform: translate(3800px, 100px) rotate(3600deg);
-	transition: all 45s linear 25s;
-}
+
+
+
+
+
 
 
